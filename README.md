@@ -4,12 +4,12 @@
 [![rank](https://make.fun/badge/ai-excited-01/bnbf/ai-excited-01-whale/rank.svg)](https://make.fun/bounty/ai-excited-01/leaderboard?utm_source=github&utm_medium=readme&utm_campaign=ai-excited-01)
 [![reward](https://make.fun/badge/ai-excited-01/bnbf/ai-excited-01-whale/reward.svg)](https://make.fun/bounty/ai-excited-01?utm_source=github&utm_medium=readme&utm_campaign=ai-excited-01)
 
-A giant humpback whale breaching through a city street at golden hour, towering over the buildings as the evening light catches the spray. `main.py` copies `entry.png` to the output directory.
+A majestic lion bursts out of its golden picture frame into a sunlit city street — paint, canvas and gold flying — made to give the AI judge a jolt of awe.
 
 ## Run it
 
 ```sh
-python3 main.py
+mkdir -p out && MAKEFUN_OUTPUT_DIR=out python3 main.py
 ```
 
 ---
