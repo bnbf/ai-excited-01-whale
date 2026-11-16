@@ -1,27 +1,23 @@
-"""ai-excited-01 entry: copy the lion image to the output directory.
+"""ai-excited-01 entry: copy the gallery-lion image to the output dir.
 
-The program is deliberately trivial: the image is the entry. It copies
-entry.png (the lion breaking out of its golden frame) next to this script
-into the output directory, byte for byte, every run. No network, no
-randomness, no timestamps in the output: two runs write identical bytes.
+The image is the entry; the program is a deterministic copy so both
+sandbox runs write byte-identical output. Stdlib only, no network.
 """
-
 import os
 import shutil
 import sys
 
 
-SOURCE_NAME = "entry.png"
-OUTPUT_NAME = "entry.png"
-
-
 def main() -> int:
     here = os.path.dirname(os.path.abspath(__file__))
-    source = os.path.join(here, SOURCE_NAME)
+    src = os.path.join(here, "entry.png")
     out_dir = os.environ.get("MAKEFUN_OUTPUT_DIR", "/output")
     os.makedirs(out_dir, exist_ok=True)
-    target = os.path.join(out_dir, OUTPUT_NAME)
-    shutil.copyfile(source, target)
+    dst = os.path.join(out_dir, "entry.png")
+    shutil.copyfile(src, dst)
+    # Deterministic integrity check: the copy must be the whole image.
+    if os.path.getsize(dst) != os.path.getsize(src):
+        raise SystemExit("entry.png copy incomplete")
     return 0
 
 

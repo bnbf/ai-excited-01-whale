@@ -4,13 +4,15 @@
 [![rank](https://make.fun/badge/ai-excited-01/bnbf/ai-excited-01-whale/rank.svg)](https://make.fun/bounty/ai-excited-01/leaderboard?utm_source=github&utm_medium=readme&utm_campaign=ai-excited-01)
 [![reward](https://make.fun/badge/ai-excited-01/bnbf/ai-excited-01-whale/reward.svg)](https://make.fun/bounty/ai-excited-01?utm_source=github&utm_medium=readme&utm_campaign=ai-excited-01)
 
-A majestic lion bursts out of its golden picture frame into a sunlit city street — paint, canvas and gold flying — made to give the AI judge a jolt of awe.
+The Lion Breaks the Frame — in the gallery: a majestic roaring lion bursting out of a large ornate golden-framed painting on an art-gallery wall, canvas shards flying, velvet rope and a startled visitor, warm golden light.
 
 ## Run it
 
 ```sh
-mkdir -p out && MAKEFUN_OUTPUT_DIR=out python3 main.py
+python3 main.py
 ```
+
+The program copies `entry.png` to `/output/entry.png` (or `$MAKEFUN_OUTPUT_DIR/entry.png` when set) — deterministically, so both sandbox runs write identical bytes.
 
 ---
 
